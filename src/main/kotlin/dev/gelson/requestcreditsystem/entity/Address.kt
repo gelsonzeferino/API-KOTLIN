@@ -1,9 +1,10 @@
 package dev.gelson.requestcreditsystem.entity
 
+import jakarta.persistence.Column
 import jakarta.persistence.Embeddable
 
 @Embeddable
 data class Address(
-    var zipCode: String,
-    var street: String
+    @Column(nullable = false)  var zipCode: String = "",
+    @Column(nullable = false)  var street: String = ""
 )
